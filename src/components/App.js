@@ -4,6 +4,11 @@ import Main from "./main_comp/Main"
 
 class App extends React.Component{
 
+    constructor(props){
+        super();
+        console.log(props.shoesData);
+    }
+
     render(){
         return(
             <div class="wrapper">

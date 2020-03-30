@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 class Main extends React.Component{
-    render(){
-        return(
-            <h2>Main content</h2>
+    render() {
+        return (
+            <div>
+                <h2>Content space</h2>
+            </div>
         )
     }
 }
