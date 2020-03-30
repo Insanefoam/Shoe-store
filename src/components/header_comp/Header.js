@@ -1,9 +1,20 @@
 import React from 'react';
+import Nav from './Nav';
 
 class Header extends React.Component{
+    constructor(props) {
+        super();
+
+        this.state = {
+            names: props.names
+        }
+    }
+
     render(){
         return(
-            <h1>Header space</h1>
+            <header class="header">
+                
+            </header>
         )
     }
 }

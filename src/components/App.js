@@ -6,14 +6,22 @@ class App extends React.Component{
 
     constructor(props){
         super();
-        console.log(props.shoesData);
+
+        let brandsNames = props.shoesData.map((el) => el.brandTag);
+        let brandModels = props.shoesData.map((el) => el.brandModels);
+
+        this.state = {
+            shoesData: props.shoesData,
+            brandsNames: brandsNames,
+            brandModels: brandModels
+        }
     }
 
     render(){
         return(
-            <div class="wrapper">
-                <Header />
-                <Main />
+            <div className="wrapper">
+                <Header names={this.state.brandModels}/>
+                <Main models={this.state.brandModels}/>
             </div>
         )
     }
