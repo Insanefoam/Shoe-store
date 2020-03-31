@@ -23,7 +23,7 @@ export default class Nav extends React.Component {
 
     render() {
         return (
-            <a className="nav__el" onClick={this.clickHandler}>
+            <a className="nav__el" onClick={this.clickHandler} href="#">
                 {this.state.name}
             </a>
         )

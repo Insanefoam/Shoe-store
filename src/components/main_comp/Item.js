@@ -4,7 +4,7 @@ export default class Item extends Component {
     constructor(props) {
         super(props)
         const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
-        const imgPath = "./assets/models/" + props.brand + "/" + modelNameForPath + ".png";
+        const imgPath = `./assets/models/${props.brand}/${modelNameForPath}.png`;
         this.state = {
             brand: props.brand,
             name: props.model.modelName,

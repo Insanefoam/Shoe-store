@@ -1,6 +1,7 @@
-import React from 'react'
-import Item from './Item'
-class Main extends React.Component{
+import React from 'react';
+import Item from './Item';
+
+export default class Main extends React.Component{
     constructor(props) {
         super();
         
@@ -17,11 +18,11 @@ class Main extends React.Component{
     }
 
     createItems(rawData){
-        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} key={index}/>)
+        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} key={el}/>)
     }
 
     createPath(brandName){
-        return "./assets/logos/" + brandName + ".svg";
+        return `./assets/logos/${brandName}.svg`
     }
 
     componentWillReceiveProps(newProps) {
@@ -52,5 +53,3 @@ class Main extends React.Component{
         )
     }
 }
-
-export default Main;
