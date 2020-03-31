@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 export default class Item extends Component {
     constructor(props) {
         super(props)
-
         const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
         const imgPath = "./assets/models/" + props.brand + "/" + modelNameForPath + ".png";
         this.state = {
@@ -12,6 +11,19 @@ export default class Item extends Component {
             price: props.model.modelPrice,
             imgPath: imgPath
         }
+    }
+
+    componentWillReceiveProps(props){
+        const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
+        const imgPath = "./assets/models/" + props.brand + "/" + modelNameForPath + ".png";
+        this.setState((prevState) => {
+            return ( {
+                brand: props.brand,
+                name: props.model.modelName,
+                price: props.model.modelPrice,
+                imgPath: imgPath
+            })
+        });
     }
     
     render() {

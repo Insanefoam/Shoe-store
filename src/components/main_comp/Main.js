@@ -4,22 +4,42 @@ class Main extends React.Component{
     constructor(props) {
         super();
         
-        const logoPath = "./assets/logos/" + props.brand + ".svg";
-        const items = props.models.map((el, index) => <Item brand={props.brand} model={el} key={index}/>)
+        const logoPath = this.createPath(props.brand);
+        const items = this.createItems(props);
         this.state = {
             models: props.models,
             brand: props.brand,
             logoPath: logoPath,
             items: items
         }
+        this.createItems = this.createItems.bind(this);
+        this.createPath = this.createPath.bind(this);
     }
 
-    componentWillReceiveProps(props) {
-        console.log("i recieve props");
-        console.log(props);
+    createItems(rawData){
+        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} key={index}/>)
+    }
+
+    createPath(brandName){
+        return "./assets/logos/" + brandName + ".svg";
+    }
+
+    componentWillReceiveProps(newProps) {
+        const newItems = this.createItems(newProps);
+        const newPath = this.createPath(newProps.brand);
+        this.setState((prevState) => {
+            return {
+                brand: newProps.brand,
+                logoPath: newPath,
+                items: newItems
+                }
+            }
+        );
     }
 
     render() {
+        console.log("rerender with state");
+        console.log(this.state.items);
         return (
             <div className="main">
                 <div className="main__brandlogowrap">
