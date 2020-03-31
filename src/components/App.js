@@ -13,7 +13,8 @@ class App extends React.Component{
         this.state = {
             shoesData: props.shoesData,
             brandsNames: brandsNames,
-            brandModels: brandModels
+            brandModels: brandModels,
+            currentBrand: 0
         }
     }
 
@@ -21,7 +22,8 @@ class App extends React.Component{
         return(
             <div className="wrapper">
                 <Header names={this.state.brandsNames}/>
-                <Main models={this.state.brandModels[0]} brand="converse"/>
+                <Main models={this.state.brandModels[this.state.currentBrand]} 
+                    brand={this.state.brandsNames[this.state.currentBrand]}/>
             </div>
         )
     }

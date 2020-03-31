@@ -5,7 +5,7 @@ class Header extends React.Component{
     constructor(props) {
         super();
 
-        const navComponents = props.names.map((el) => <Nav name={el}/>)
+        const navComponents = props.names.map((el, index) => <Nav name={el} id={index} key={index}/>)
 
         this.state = {
             logoText: "Sneakershop",

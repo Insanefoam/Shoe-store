@@ -5,7 +5,7 @@ class Main extends React.Component{
         super();
         
         const logoPath = "./assets/logos/" + props.brand + ".svg";
-        const items = props.models.map((el) => <Item brand={props.brand} model={el}/>)
+        const items = props.models.map((el, index) => <Item brand={props.brand} model={el} key={index}/>)
         this.state = {
             models: props.models,
             brand: props.brand,
@@ -18,7 +18,7 @@ class Main extends React.Component{
         return (
             <div className="main">
                 <div className="main__brandlogowrap">
-                    <img className="main__brandlogo" src={this.state.logoPath}></img>
+                    <img className="main__brandlogo" src={this.state.logoPath} alt="Brand Logo"></img>
                 </div>
                 <div className="shoeswrap">
                     {this.state.items}

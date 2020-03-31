@@ -18,7 +18,7 @@ export default class Item extends Component {
         return (
             <div className="shoeswrap__el">
                 <a href="">
-                    <img className="el__image" src={this.state.imgPath}></img>
+                    <img className="el__image" src={this.state.imgPath} alt="Shoe"></img>
                 </a>
                 <div className="el__name">{this.state.name}</div>
                 <div className="el__price">{this.state.price}$</div>

@@ -5,6 +5,7 @@ export default class Nav extends React.Component {
         super();
         this.state = {
             name: props.name,
+            id: props.id,
             focus: false
         }
     }
