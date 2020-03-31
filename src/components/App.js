@@ -21,7 +21,7 @@ class App extends React.Component{
         return(
             <div className="wrapper">
                 <Header names={this.state.brandsNames}/>
-                <Main models={this.state.brandModels}/>
+                <Main models={this.state.brandModels[0]} brand="converse"/>
             </div>
         )
     }

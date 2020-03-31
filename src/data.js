@@ -5,7 +5,7 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Chuck Taylor All Start',
+                modelName: 'Chuck Taylor All Star',
                 modelPrice: 3500,
             },
             {
