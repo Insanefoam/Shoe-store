@@ -14,6 +14,11 @@ class Main extends React.Component{
         }
     }
 
+    componentWillReceiveProps(props) {
+        console.log("i recieve props");
+        console.log(props);
+    }
+
     render() {
         return (
             <div className="main">

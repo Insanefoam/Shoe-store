@@ -16,12 +16,21 @@ class App extends React.Component{
             brandModels: brandModels,
             currentBrand: 0
         }
+        this.changeCurrentBrand = this.changeCurrentBrand.bind(this);
+    }
+
+    changeCurrentBrand(newId){
+        this.setState((prevState) => {
+            return {
+                currentBrand: newId
+            }
+        });
     }
 
     render(){
         return(
             <div className="wrapper">
-                <Header names={this.state.brandsNames}/>
+                <Header names={this.state.brandsNames} changeCurrentBrand={this.changeCurrentBrand}/>
                 <Main models={this.state.brandModels[this.state.currentBrand]} 
                     brand={this.state.brandsNames[this.state.currentBrand]}/>
             </div>
