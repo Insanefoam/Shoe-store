@@ -1,7 +1,7 @@
 const data = 
 [
     {
-        brandTag: 'Asics',
+        brandTag: 'Converse',
         brandModels: 
         [
             {
@@ -21,6 +21,115 @@ const data =
     },
     {
         brandTag: 'Nike',
+        brandModels: 
+        [
+            {
+                modelName: 'Air Max Bella',
+                modelPrice: 4000
+            },
+            {
+                modelName: 'Air Max 720',
+                modelPrice: 2700
+            },
+            {
+                modelName: 'React Ianga',
+                modelPrice: 3500
+            },
+            
+        ]
+    },
+    {
+        brandTag: 'Adidas',
+        brandModels: 
+        [
+            {
+                modelName: 'Air Max Bella',
+                modelPrice: 4000
+            },
+            {
+                modelName: 'Air Max 720',
+                modelPrice: 2700
+            },
+            {
+                modelName: 'React Ianga',
+                modelPrice: 3500
+            },
+            
+        ]
+    },{
+        brandTag: 'Asics',
+        brandModels: 
+        [
+            {
+                modelName: 'Air Max Bella',
+                modelPrice: 4000
+            },
+            {
+                modelName: 'Air Max 720',
+                modelPrice: 2700
+            },
+            {
+                modelName: 'React Ianga',
+                modelPrice: 3500
+            },
+            
+        ]
+    },{
+        brandTag: 'New Balance',
+        brandModels: 
+        [
+            {
+                modelName: 'Air Max Bella',
+                modelPrice: 4000
+            },
+            {
+                modelName: 'Air Max 720',
+                modelPrice: 2700
+            },
+            {
+                modelName: 'React Ianga',
+                modelPrice: 3500
+            },
+            
+        ]
+    },{
+        brandTag: 'Reebok',
+        brandModels: 
+        [
+            {
+                modelName: 'Air Max Bella',
+                modelPrice: 4000
+            },
+            {
+                modelName: 'Air Max 720',
+                modelPrice: 2700
+            },
+            {
+                modelName: 'React Ianga',
+                modelPrice: 3500
+            },
+            
+        ]
+    },{
+        brandTag: 'Vans',
+        brandModels: 
+        [
+            {
+                modelName: 'Air Max Bella',
+                modelPrice: 4000
+            },
+            {
+                modelName: 'Air Max 720',
+                modelPrice: 2700
+            },
+            {
+                modelName: 'React Ianga',
+                modelPrice: 3500
+            },
+            
+        ]
+    },{
+        brandTag: 'Puma',
         brandModels: 
         [
             {
