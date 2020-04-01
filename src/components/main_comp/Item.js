@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Items.css';
 
 export default class Item extends Component {
     constructor(props) {
@@ -34,7 +35,7 @@ export default class Item extends Component {
     render() {
         return (
             <div className="shoeswrap__el">
-                <a href="">
+                <a href="#">
                     <img className="el__image" src={this.state.imgPath} alt="Shoe"></img>
                 </a>
                 <div className="el__name">{this.state.name}</div>

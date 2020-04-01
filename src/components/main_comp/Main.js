@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from './Item';
+import './Main.css';
 
 export default class Main extends React.Component{
     constructor(props) {
@@ -44,7 +45,9 @@ export default class Main extends React.Component{
         console.log(this.state.logoPath);
         return (
             <div className="main">
-                <img className="main__brandlogo" src={this.state.logoPath} alt="Brand Logo"></img>
+                <div className="logowrap">
+                    <img className="logowrap__logo" src={this.state.logoPath} alt="Brand Logo"></img>
+                </div>
                 <div className="shoeswrap">
                     {this.state.items}
                 </div>

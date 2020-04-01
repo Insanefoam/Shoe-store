@@ -1,0 +1,13 @@
+.logowrap{
+    text-align: center;
+}
+
+.logowrap__logo{
+    width: 300px;
+    height: 190px;
+}
+
+.shoeswrap{
+    margin-right: 10px;
+    margin-left: 10;
+}

@@ -1,0 +1,21 @@
+.shoeswrap__el{
+    display: inline-block;
+    margin-right: 200px;
+}
+
+.shoeswrap__el:last-child{
+    margin-right: 0px;
+}
+
+.el__image{
+    width: 300px;
+    height: 300px;
+}
+
+.el__name{
+    text-align: center;
+}
+
+.el__price{
+    text-align: center;
+}
