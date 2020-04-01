@@ -18,16 +18,18 @@ export default class Main extends React.Component{
     }
 
     createItems(rawData){
-        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} key={el}/>)
+        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} key={index}/>)
     }
 
     createPath(brandName){
-        return `./assets/logos/${brandName}.svg`
+        let brandWithoutSpace = brandName.toLowerCase().replace(/ /g, '_');
+        return `./assets/logos/${brandWithoutSpace}.svg`
     }
 
     componentWillReceiveProps(newProps) {
         const newItems = this.createItems(newProps);
         const newPath = this.createPath(newProps.brand);
+        console.log(newPath);
         this.setState((prevState) => {
             return {
                 brand: newProps.brand,
@@ -39,13 +41,10 @@ export default class Main extends React.Component{
     }
 
     render() {
-        console.log("rerender with state");
-        console.log(this.state.items);
+        console.log(this.state.logoPath);
         return (
             <div className="main">
-                <div className="main__brandlogowrap">
-                    <img className="main__brandlogo" src={this.state.logoPath} alt="Brand Logo"></img>
-                </div>
+                <img className="main__brandlogo" src={this.state.logoPath} alt="Brand Logo"></img>
                 <div className="shoeswrap">
                     {this.state.items}
                 </div>

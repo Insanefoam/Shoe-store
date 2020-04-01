@@ -6,7 +6,7 @@ class Header extends React.Component{
         super();
 
         const navComponents = props.names.map((el, index) => {
-            return <Nav name={el} id={index} key={index} changeCurrentBrand={props.changeCurrentBrand}/>
+            return <Nav name={el} id={index} key={el} changeCurrentBrand={props.changeCurrentBrand}/>
         })
 
         this.state = {
@@ -19,7 +19,7 @@ class Header extends React.Component{
     render(){
         return(
             <header className="header">
-                <h1 className="header__logo">{this.state.logoText}</h1>
+                <h1 className="header__logo" href="#">{this.state.logoText}</h1>
                 <nav className="nav">
                     {this.state.navComponents}
                 </nav>

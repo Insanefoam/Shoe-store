@@ -4,7 +4,8 @@ export default class Item extends Component {
     constructor(props) {
         super(props)
         const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
-        const imgPath = `./assets/models/${props.brand}/${modelNameForPath}.png`;
+        let brandWithoutSpace = props.brand.toLowerCase().replace(/ /g, '_');
+        const imgPath = `./assets/models/${brandWithoutSpace}/${modelNameForPath}.png`;
         this.state = {
             brand: props.brand,
             name: props.model.modelName,
@@ -13,9 +14,14 @@ export default class Item extends Component {
         }
     }
 
+    /*
+        Add brand and path calculator 
+    */
+
     componentWillReceiveProps(props){
         const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
-        const imgPath = "./assets/models/" + props.brand + "/" + modelNameForPath + ".png";
+        let brandWithoutSpace = props.brand.toLowerCase().replace(/ /g, '_');
+        const imgPath = "./assets/models/" + brandWithoutSpace + "/" + modelNameForPath + ".png";
         this.setState((prevState) => {
             return ( {
                 brand: props.brand,

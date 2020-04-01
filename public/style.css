@@ -25,3 +25,8 @@ body
     border-bottom: 1px solid #AE2B2B;
     transition-duration: 0.3s;
 }
+
+.main__brandlogo{
+    width: 300px;
+    height: 190px;
+}

@@ -43,16 +43,16 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Air Max Bella',
-                modelPrice: 4000
+                modelName: 'NMD R1',
+                modelPrice: 1000
             },
             {
-                modelName: 'Air Max 720',
-                modelPrice: 2700
+                modelName: 'Yung-1',
+                modelPrice: 2200
             },
             {
-                modelName: 'React Ianga',
-                modelPrice: 3500
+                modelName: 'Yeezy Boost 700',
+                modelPrice: 3300
             },
             
         ]
@@ -61,15 +61,15 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Air Max Bella',
+                modelName: 'Gel Lyte 3',
                 modelPrice: 4000
             },
             {
-                modelName: 'Air Max 720',
+                modelName: 'Gel Quantum',
                 modelPrice: 2700
             },
             {
-                modelName: 'React Ianga',
+                modelName: 'Gel Kayano 5 OG',
                 modelPrice: 3500
             },
             
@@ -79,15 +79,15 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Air Max Bella',
+                modelName: 'BHM 2020',
                 modelPrice: 4000
             },
             {
-                modelName: 'Air Max 720',
+                modelName: '997 H',
                 modelPrice: 2700
             },
             {
-                modelName: 'React Ianga',
+                modelName: '850',
                 modelPrice: 3500
             },
             
@@ -97,15 +97,15 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Air Max Bella',
+                modelName: 'SS 20',
                 modelPrice: 4000
             },
             {
-                modelName: 'Air Max 720',
+                modelName: 'ZIG Kinetica',
                 modelPrice: 2700
             },
             {
-                modelName: 'React Ianga',
+                modelName: 'Vetements',
                 modelPrice: 3500
             },
             
@@ -115,15 +115,15 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Air Max Bella',
+                modelName: 'Old Skool',
                 modelPrice: 4000
             },
             {
-                modelName: 'Air Max 720',
+                modelName: 'Old Skool High',
                 modelPrice: 2700
             },
             {
-                modelName: 'React Ianga',
+                modelName: 'Old Skool Black',
                 modelPrice: 3500
             },
             
@@ -133,15 +133,15 @@ const data =
         brandModels: 
         [
             {
-                modelName: 'Air Max Bella',
+                modelName: 'Puzzle Men',
                 modelPrice: 4000
             },
             {
-                modelName: 'Air Max 720',
+                modelName: 'Pirelli Black',
                 modelPrice: 2700
             },
             {
-                modelName: 'React Ianga',
+                modelName: 'RS-X',
                 modelPrice: 3500
             },
             
