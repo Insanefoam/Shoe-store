@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 export default class Item extends Component {
     constructor(props) {
         super(props)
-        const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
-        let brandWithoutSpace = props.brand.toLowerCase().replace(/ /g, '_');
-        const imgPath = `./assets/models/${brandWithoutSpace}/${modelNameForPath}.png`;
+        
+        const imgPath = this.createModelPath(props.model.modelName, props.brand);
         this.state = {
             brand: props.brand,
             name: props.model.modelName,
@@ -14,14 +13,14 @@ export default class Item extends Component {
         }
     }
 
-    /*
-        Add brand and path calculator 
-    */
+    createModelPath(modelName, brandName){
+        const modelNameForPath = modelName.toLowerCase().replace(/ /g, '_');
+        let brandWithoutSpace = brandName.toLowerCase().replace(/ /g, '_');
+        return `./assets/models/${brandWithoutSpace}/${modelNameForPath}.png`;
+    }
 
     componentWillReceiveProps(props){
-        const modelNameForPath = props.model.modelName.toLowerCase().replace(/ /g, '_');
-        let brandWithoutSpace = props.brand.toLowerCase().replace(/ /g, '_');
-        const imgPath = "./assets/models/" + brandWithoutSpace + "/" + modelNameForPath + ".png";
+        const imgPath = this.createModelPath(props.model.modelName, props.brand);
         this.setState((prevState) => {
             return ( {
                 brand: props.brand,
