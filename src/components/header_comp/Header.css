@@ -1,5 +1,11 @@
-.header__logo{
+.header__logowrap{
+    color: black;
     text-align: center;
+    text-decoration: none;
+}
+
+.header__logo{
+    font-size: 35px;
 }
 
 .nav{

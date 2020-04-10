@@ -1,5 +1,6 @@
 .logowrap{
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .logowrap__logo{
@@ -9,5 +10,5 @@
 
 .shoeswrap{
     margin-right: 10px;
-    margin-left: 10;
+    margin-bottom: 40px;
 }

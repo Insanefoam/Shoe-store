@@ -19,7 +19,9 @@ class Header extends React.Component{
     render(){
         return(
             <header className="header">
-                <h1 className="header__logo" href="#">{this.state.logoText}</h1>
+                <a className="header__logowrap" href="#">
+                    <h1 className="header__logo">{this.state.logoText}</h1>
+                </a>
                 <nav className="nav">
                     {this.state.navComponents}
                 </nav>

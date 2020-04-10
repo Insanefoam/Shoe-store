@@ -51,6 +51,9 @@ export default class Main extends React.Component{
                 <div className="shoeswrap">
                     {this.state.items}
                 </div>
+                <div>
+                    <img alt="more"></img>
+                </div>
             </div>
         )
     }
