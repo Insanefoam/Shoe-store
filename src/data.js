@@ -16,7 +16,10 @@ const data =
                 modelName: 'Corey Taylor Dickhead Shoe',
                 modelPrice: 1200
             },
-            
+            {
+                modelName: 'Chuck Taylor All Star',
+                modelPrice: 1200
+            }
         ]
     },
     {

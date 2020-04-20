@@ -1,9 +1,10 @@
 .shoeswrap__el{
+    margin-top: 20px;
     display: inline-block;
     margin-right: 200px;
 }
 
-.shoeswrap__el:last-child{
+.shoeswrap__el:nth-child(3){
     margin-right: 0px;
 }
 
