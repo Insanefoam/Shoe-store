@@ -51,9 +51,9 @@ export default class Main extends React.Component{
                 <div className="shoeswrap">
                     {this.state.items}
                 </div>
-                <div>
-                    <img alt="more"></img>
-                </div>
+                <a href="#" className="morewrap">
+                    <img alt="more" src="./assets/bottomarrow.svg" className="morewrap__more"></img>
+                </a>
             </div>
         )
     }
