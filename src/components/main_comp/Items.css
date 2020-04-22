@@ -4,10 +4,6 @@
     margin-right: 200px;
 }
 
-.shoeswrap__el:nth-child(3){
-    margin-right: 0px;
-}
-
 .el__image{
     width: 300px;
     height: 300px;

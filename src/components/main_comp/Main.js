@@ -14,15 +14,16 @@ export default class Main extends React.Component{
             models: props.models,
             brand: props.brand,
             logoPath: logoPath,
-            availableItems: availableItems,
-            currentItems: currentItems
+            currentItems: currentItems,
+            availableItems: availableItems
         }
         this.createItems = this.createItems.bind(this);
         this.createPath = this.createPath.bind(this);
+        this.loadMoreItems = this.loadMoreItems.bind(this);
     }
 
     createItems(rawData){
-        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} key={index}/>)
+        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} id={index}/>)
     }
 
     createPath(brandName){
@@ -39,15 +40,26 @@ export default class Main extends React.Component{
             return {
                 brand: newProps.brand,
                 logoPath: newPath,
-                availableItems: newItems,
-                currentItems: currentItems
+                currentItems: currentItems,
+                availableItems: availableItems
                 }
             }
         );
     }
 
     loadMoreItems(){
-
+        const itemsToAdd = this.state.availableItems.slice(0, 3);
+        const currentItems = this.state.currentItems.concat(itemsToAdd);
+        const availableItems = this.state.availableItems.slice(
+                                itemsToAdd.length, 
+                                this.state.availableItems.length);
+        console.log(currentItems);
+        this.setState((prevState) => {
+            return {
+                currentItems: currentItems,
+                availableItems: availableItems
+            }
+        })
     }
 
     render() {

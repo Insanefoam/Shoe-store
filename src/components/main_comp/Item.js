@@ -6,11 +6,20 @@ export default class Item extends Component {
         super(props)
         
         const imgPath = this.createModelPath(props.model.modelName, props.brand);
+        
+        const style = {
+            marginRight: '200px'
+        };
+        if((props.id + 1) % 3 === 0) {
+            style.marginRight = '0px'
+        };
+
         this.state = {
             brand: props.brand,
             name: props.model.modelName,
             price: props.model.modelPrice,
-            imgPath: imgPath
+            imgPath: imgPath,
+            style: style
         }
     }
 
@@ -34,7 +43,7 @@ export default class Item extends Component {
     
     render() {
         return (
-            <div className="shoeswrap__el">
+            <div className="shoeswrap__el" style={this.state.style}>
                 <a href="#">
                     <img className="el__image" src={this.state.imgPath} alt="Shoe"></img>
                 </a>

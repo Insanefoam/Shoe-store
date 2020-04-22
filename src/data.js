@@ -18,7 +18,19 @@ const data =
             },
             {
                 modelName: 'Chuck Taylor All Star',
+                modelPrice: 3500,
+            },
+            {
+                modelName: 'Converse Big Dick In Town',
+                modelPrice: 2800
+            },
+            {
+                modelName: 'Corey Taylor Dickhead Shoe',
                 modelPrice: 1200
+            },
+            {
+                modelName: 'Chuck Taylor All Star',
+                modelPrice: 3500,
             }
         ]
     },
