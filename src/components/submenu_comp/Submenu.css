@@ -1,0 +1,8 @@
+.submenu{
+    position: absolute;
+    top: 50%;
+    right: 45%;
+    bottom: 50%;
+    font-size: 50px;
+    color: red;
+}

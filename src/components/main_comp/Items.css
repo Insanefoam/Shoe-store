@@ -16,3 +16,8 @@
 .el__price{
     text-align: center;
 }
+
+.el__submenu{
+    left: 50%;
+    right: 50%;
+}

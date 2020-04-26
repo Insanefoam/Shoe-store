@@ -15,7 +15,7 @@ export default class Main extends React.Component{
             brand: props.brand,
             logoPath: logoPath,
             currentItems: currentItems,
-            availableItems: availableItems
+            availableItems: availableItems,
         }
         this.createItems = this.createItems.bind(this);
         this.createPath = this.createPath.bind(this);
@@ -23,7 +23,9 @@ export default class Main extends React.Component{
     }
 
     createItems(rawData){
-        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} id={index} key={el}/>)
+        return rawData.models.map((el, index) => <Item brand={rawData.brand} 
+                                    model={el} id={index} key={el}
+                                    showSubMenu={rawData.showSubMenu}/>)
     }
 
     createPath(brandName){
