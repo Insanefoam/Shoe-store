@@ -17,5 +17,5 @@
 .nav__el:hover{
     border-top: 1px solid #AE2B2B;
     border-bottom: 1px solid #AE2B2B;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
 }

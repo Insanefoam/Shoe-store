@@ -19,8 +19,13 @@ export default class Item extends Component {
             name: props.model.modelName,
             price: props.model.modelPrice,
             imgPath: imgPath,
-            style: style
+            style: style,
+            subMenuStyle: {
+                display: 'none',
+                position: 'absolute'
+            }
         }
+        this.showSubMenu = this.showSubMenu.bind(this);
     }
 
     createModelPath(modelName, brandName){
@@ -41,12 +46,27 @@ export default class Item extends Component {
         });
     }
     
+    showSubMenu() {
+        this.setState((prevState) => {
+            return (
+                {
+                    subMenuStyle: {
+                        display: 'inline',
+                        position: 'absolute'
+                    }
+                }
+            )
+        });
+        console.log(this.state);
+    }
+
     render() {
         return (
             <div className="shoeswrap__el" style={this.state.style}>
-                <a href="#">
+                <a href="#shoe" id="shoe" onClick={this.showSubMenu}>
                     <img className="el__image" src={this.state.imgPath} alt="Shoe"></img>
                 </a>
+                <div style={this.state.subMenuStyle} className="el__submenu">hellooo</div>
                 <div className="el__name">{this.state.name}</div>
                 <div className="el__price">{this.state.price}$</div>
             </div>

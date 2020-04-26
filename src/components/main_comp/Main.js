@@ -23,7 +23,7 @@ export default class Main extends React.Component{
     }
 
     createItems(rawData){
-        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} id={index}/>)
+        return rawData.models.map((el, index) => <Item brand={rawData.brand} model={el} id={index} key={el}/>)
     }
 
     createPath(brandName){
@@ -71,7 +71,7 @@ export default class Main extends React.Component{
                 <div className="shoeswrap">
                     {this.state.currentItems}
                 </div>
-                <a href="#" className="morewrap" onClick={this.loadMoreItems}>
+                <a href="#morewrap" className="morewrap" onClick={this.loadMoreItems} id="morewrap">
                     <img alt="more" src="./assets/bottomarrow.svg" className="morewrap__more"></img>
                 </a>
             </div>
