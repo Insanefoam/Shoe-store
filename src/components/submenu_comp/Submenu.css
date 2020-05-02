@@ -1,8 +1,10 @@
 .submenu{
     position: absolute;
+    font-size: 20px;
+    left: 40%;
     top: 50%;
-    right: 45%;
-    bottom: 50%;
-    font-size: 50px;
-    color: red;
+}
+
+.submenu__item{
+    display: inline-block;
 }
