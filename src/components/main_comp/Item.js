@@ -6,7 +6,6 @@ export default class Item extends Component {
         super(props)
         
         const imgPath = this.createModelPath(props.model.modelName, props.brand);
-        
         const style = {
             marginRight: '200px'
         };

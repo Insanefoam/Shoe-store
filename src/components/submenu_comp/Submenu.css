@@ -1,10 +1,61 @@
 .submenu{
     position: absolute;
     font-size: 20px;
-    left: 40%;
     top: 50%;
+    left: 8%;
+    border: 1px solid black;
+    background-color: white;
 }
 
 .submenu__item{
     display: inline-block;
+    margin: 50px 320px 160px 100px;
+}
+
+.submenu__title{
+    text-align: center;
+}
+
+.submenu__service{
+    display: inline-block;
+    margin-bottom: 100px;
+    margin-right: 30px;
+}
+
+.submenu__iteminfo{
+    display: block;
+    margin-top: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.submenu__countinput{
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    padding: 9px 0px;
+    font-size: 18px;
+    width: 50%;
+}
+
+.submenu__finalprice{
+    display: inline;
+    border: 1px solid black;
+    padding: 9px 20px;
+    text-align: center;
+    vertical-align: text-top;
+    margin-right: 10px;
+}
+
+.submenu__cart{
+    vertical-align: middle;
+    width: 45px;
+    height: 45px;   
+}
+
+.submenu__close{
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 3%;
 }
