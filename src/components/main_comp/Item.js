@@ -21,6 +21,7 @@ export default class Item extends Component {
             style: style,
             showSubMenu: props.showSubMenu
         }
+        this.showSubMenuWrapper = this.showSubMenuWrapper.bind(this);
     }
 
     createModelPath(modelName, brandName){
@@ -41,11 +42,14 @@ export default class Item extends Component {
         });
     }
     
+    showSubMenuWrapper(){
+        this.state.showSubMenu(this);
+    }
 
     render() {
         return (
             <div className="shoeswrap__el" style={this.state.style}>
-                <a href="#shoe" id="shoe" onClick={this.state.showSubMenu}>
+                <a href="#shoe" id="shoe" onClick={this.showSubMenuWrapper}>
                     <img className="el__image" src={this.state.imgPath} alt="Shoe"></img>
                 </a>
                 <div className="el__name">{this.state.name}</div>
