@@ -12,6 +12,11 @@
     margin: 50px 320px 160px 100px;
 }
 
+.submenu__image{
+    width: 300px;
+    height: 300px;
+}
+
 .submenu__title{
     text-align: center;
 }

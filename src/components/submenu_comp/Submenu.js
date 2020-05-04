@@ -7,27 +7,33 @@ export default class Submenu extends Component {
         this.state = {
             style: {
                 display: props.status,
-            },
-            imgPath: props.source.imgPath,
-            name: props.source.name,
-            price: props.source.price
+            }
+        }
+        if(props.source !== null){
+            this.state.imgPath = props.source.imgPath;
+            this.state.name = props.source.name;
+            this.state.price = props.source.price;
         }
         this.hideOnClick = this.hideOnClick.bind(this);
     }
 
     componentWillReceiveProps(props){
+        console.log(props);
         this.setState((prevState) => {
-            return(
-                {
-                    style: {
-                        display: props.status,
-                    },
-                    imgPath: props.source.state.imgPath,
-                    name: props.source.state.name,
-                    price: props.source.state.price
+            let result = {
+                style: {
+                    display: props.status
                 }
-            )
-        })
+            };
+            if(props.source !== null){
+                result.imgPath = props.source.state.imgPath;
+                result.name = props.source.state.name;
+                result.price = props.source.state.price;
+            }
+            console.log(result);
+            return result;
+            }
+        )
     }
 
     hideOnClick(){
@@ -35,7 +41,7 @@ export default class Submenu extends Component {
             return(
                 {
                     style: {
-                        display: "none"
+                        display: 'none'
                     }
                 }
             )

@@ -17,9 +17,7 @@ class App extends React.Component{
             brandModels: brandModels,
             currentBrand: 0,
             subMenuStatus: 'none',
-            subMenuSource: {
-
-            }
+            subMenuSource: null
         }
         this.changeCurrentBrand = this.changeCurrentBrand.bind(this);
         this.showSubMenu = this.showSubMenu.bind(this);
@@ -28,7 +26,8 @@ class App extends React.Component{
     changeCurrentBrand(newId){
         this.setState((prevState) => {
             return ({
-                currentBrand: newId
+                currentBrand: newId,
+                subMenuStatus: 'none'
             })
         });
     }
