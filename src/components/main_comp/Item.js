@@ -49,7 +49,7 @@ export default class Item extends Component {
     render() {
         return (
             <div className="shoeswrap__el" style={this.state.style}>
-                <a href="#shoe" id="shoe" onClick={this.showSubMenuWrapper}>
+                <a id="shoe" onClick={this.showSubMenuWrapper}>
                     <img className="el__image" src={this.state.imgPath} alt="Shoe"></img>
                 </a>
                 <div className="el__name">{this.state.name}</div>
