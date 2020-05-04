@@ -9,6 +9,10 @@
     height: 300px;
 }
 
+.el__image:hover{
+    cursor: pointer;
+}
+
 .el__name{
     text-align: center;
 }

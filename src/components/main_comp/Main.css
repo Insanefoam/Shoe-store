@@ -16,3 +16,7 @@
     display: block;
     text-align: center;
 }
+
+.morewrap:hover{
+    cursor: pointer;
+}
